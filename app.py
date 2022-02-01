@@ -28,14 +28,14 @@ st.write("Dataset: ",choose_dataset)
 @st.cache(allow_output_mutation=True)
 
 def load_feature_vectors():
-    path_dataset = "data/dataset/oxford5k/VGG16_mac_features.npy"
+    path_dataset = "data\dataset\oxford5k\VGG_16_4096d_features.npy"
     path = os.path.join(os.getcwd(),path_dataset)
     with open(path,"rb") as f:
         f_data = np.load(f)
     return f_data
 
 def load_kmeans():
-    path_kmeans = "data/dataset/oxford5k/Kmean.pkl"
+    path_kmeans = "data\dataset\oxford5k\Kmean_vgg16_4096d.pkl"
     path = os.path.join(os.getcwd(),path_kmeans)
     with open(path,"rb") as f:
         kmeans = pickle.load(f)
