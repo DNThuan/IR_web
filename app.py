@@ -36,8 +36,8 @@ def load_feature_vectors():
     return f_data
 
 def load_kmeans():
-    path_kmeans = "data\dataset\oxford5k\Kmean_vgg16_4096d.pkl"
-    path = os.path.join(os.getcwd(),path_kmeans)
+    path_kmeans = "Kmean_vgg16_4096d.pkl"
+    path = os.path.join(os.getcwd(),'data','dataset','oxford5k',path_kmeans)
     with open(path,"rb") as f:
         kmeans = pickle.load(f)
     return kmeans
