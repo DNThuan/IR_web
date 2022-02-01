@@ -28,8 +28,9 @@ st.write("Dataset: ",choose_dataset)
 @st.cache(allow_output_mutation=True)
 
 def load_feature_vectors():
-    path_dataset = "data\dataset\oxford5k\VGG_16_4096d_features.npy"
-    path = os.path.join(os.getcwd(),path_dataset)
+    path_dataset = "VGG_16_4096d_features.npy"
+    path = os.path.join(os.getcwd(),'data','dataset', 'oxford5k',path_dataset)
+
     with open(path,"rb") as f:
         f_data = np.load(f)
     return f_data
