@@ -20,7 +20,7 @@ Deploying Image Retrieval as Web Application
  
 choose_dataset = st.sidebar.selectbox(                            
                             'Dataset',
-                            ('oxford6k', 'paris5k'),
+                            ('oxford5k', 'paris6k'),
                             key=1)
 st.write("Dataset: ",choose_dataset)
 
